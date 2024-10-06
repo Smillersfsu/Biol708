@@ -1,0 +1,150 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1007/BF02696011",
+            "URL": "http://link.springer.com/10.1007/BF02696011",
+            "author": [
+                {
+                    "family": "Ganju",
+                    "given": "Neil K."
+                },
+                {
+                    "family": "Schoellhamer",
+                    "given": "David H."
+                },
+                {
+                    "family": "Bergamaschi",
+                    "given": "Brian A."
+                }
+            ],
+            "container-title": "Estuaries",
+            "id": "ganju2005",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "812-822",
+            "title": "Suspended sediment fluxes in a tidal wetland: Measurement, controlling factors, and error analysis",
+            "title-short": "Suspended sediment fluxes in a tidal wetland",
+            "type": "article-journal",
+            "volume": "28"
+        },
+        {
+            "DOI": "10.1016/j.advwatres.2015.11.020",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S030917081500295X",
+            "author": [
+                {
+                    "family": "Belliard",
+                    "given": "J.-P."
+                },
+                {
+                    "family": "Di Marco",
+                    "given": "N."
+                },
+                {
+                    "family": "Carniello",
+                    "given": "L."
+                },
+                {
+                    "family": "Toffolon",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Advances in Water Resources",
+            "id": "belliard2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "249-264",
+            "title": "Sediment and vegetation spatial dynamics facing sea-level rise in microtidal salt marshes: Insights from an ecogeomorphic model",
+            "title-short": "Sediment and vegetation spatial dynamics facing sea-level rise in microtidal salt marshes",
+            "type": "article-journal",
+            "volume": "93"
+        },
+        {
+            "DOI": "10.1016/j.coastaleng.2023.104346",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0378383923000704",
+            "author": [
+                {
+                    "family": "Taylor-Burns",
+                    "given": "Rae"
+                },
+                {
+                    "family": "Nederhoff",
+                    "given": "Kees"
+                },
+                {
+                    "family": "Lacy",
+                    "given": "Jessica R."
+                },
+                {
+                    "family": "Barnard",
+                    "given": "Patrick L."
+                }
+            ],
+            "container-title": "Coastal Engineering",
+            "id": "taylor-burns2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "104346",
+            "title": "The influence of vegetated marshes on wave transformation in sheltered estuaries",
+            "type": "article-journal",
+            "volume": "184"
+        },
+        {
+            "DOI": "10.1080/24694452.2022.2047593",
+            "URL": "https://www.tandfonline.com/doi/full/10.1080/24694452.2022.2047593",
+            "author": [
+                {
+                    "family": "Anderson",
+                    "given": "Carlton P."
+                },
+                {
+                    "family": "Carter",
+                    "given": "Gregory A."
+                },
+                {
+                    "family": "Waldron",
+                    "given": "Margaret C. B."
+                }
+            ],
+            "container-title": "Annals of the American Association of Geographers",
+            "id": "anderson2022",
+            "issue": "7",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        10,
+                        3
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1850-1865",
+            "title": "Precise Elevation Thresholds Associated with Salt MarshUpland Ecotones along the Mississippi Gulf Coast",
+            "type": "article-journal",
+            "volume": "112"
+        }
+    ],
+    "project_biblios": []
+}
