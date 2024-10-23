@@ -1,0 +1,88 @@
+---
+title: "OHI Training "
+format: html
+editor: visual
+---
+
+## Quarto
+
+https://ohi-science.org/data-science-training/dplyr.html#explore-the-gapminder-data.frame
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Chapter 6-Training Toolbox 
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+library('tidyverse') 
+```
+
+```{r}
+#National Parks in California
+ca <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/ca.csv") 
+
+#Acadia National Park
+acadia <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/acadia.csv")
+
+#Southeast US National Parks
+se <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/se.csv")
+
+#2016 Visitation for all Pacific West National Parks
+visit_16 <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/visit_16.csv")
+
+#All Nationally designated sites in Massachusetts
+mass <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/mass.csv")
+
+
+```
+
+You can add options to executable code like this
+
+```{r}
+ggplot(data = ca) + 
+  geom_point(aes(x = year, y = visitors, color = park_name)) +
+    labs(x = "Year",
+       y = "Visitation",
+       title = "California National Park Visitation") +
+    theme_classic() +
+    theme(legend.title=element_blank())
+```
+
+```{r}
+ggplot(data = se) + 
+  geom_point(aes(x = year, y = visitors, color = state))
+    labs(x = "Year",
+       y = "Visitation",
+       title = "Southeast States National Park Visitation") +
+    theme_light() +
+    theme(legend.title=element_blank())+theme(axis.text.x=element_text(angle=45, hjust = 1, size=5))+geom_line(aes(x=year, y=visitors, color=state))
+
+
+ggplot(data = se) + 
+  geom_jitter(aes(x = park_name, y = visitors, color = park_name), 
+              width = 0.1, 
+              alpha = 0.4) +
+  coord_flip() +
+  theme(legend.position = "none") 
+
+
+```
+
+```{r}
+ggplot(data = se, aes(x = year, y = visitors, color = state)) + 
+  geom_point() +
+    labs(x = "Year",
+       y = "Visitation",
+       title = "Southeast States National Park Visitation") +
+  geom_smooth() + theme_bw() 
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+**Chapter 6.3**
+
+```{r}
+## read gapminder csv. Note the readr:: prefix identifies which package it's in
+gapminder <- readr::read_csv('https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder.csv') 
+```
