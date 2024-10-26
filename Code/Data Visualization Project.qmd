@@ -23,4 +23,11 @@ You can add options to executable code like this
 2 * 2
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+The `ec`
+
+```{r}
+## read gapminder csv. Note the readr:: prefix identifies which package it's in
+gapminder <- readr::read_csv(https://github.com/Smillersfsu/Biol708/blob/main/Code/ELKVEG2016%20.xlsx ) 
+```
+
+`ho: false` option disables the printing of code (only output is displayed).

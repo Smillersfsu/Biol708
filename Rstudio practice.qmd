@@ -1,16 +1,14 @@
 ---
-title: "OHI Training "
+title: "Untitled"
 format: html
 editor: visual
 ---
 
 ## Quarto
 
-https://ohi-science.org/data-science-training/dplyr.html#explore-the-gapminder-data.frame
-
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-## Chapter 6-Training Toolbox
+## Running Code
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
@@ -33,7 +31,6 @@ visit_16 <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science
 
 #All Nationally designated sites in Massachusetts
 mass <- read_csv("https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/mass.csv")
-
 
 ```
 
@@ -65,229 +62,6 @@ ggplot(data = se) +
               alpha = 0.4) +
   coord_flip() +
   theme(legend.position = "none") 
-
-
-```
-
-```{r}
-ggplot(data = se, aes(x = year, y = visitors, color = state)) + 
-  geom_point() +
-    labs(x = "Year",
-       y = "Visitation",
-       title = "Southeast States National Park Visitation") +
-  geom_smooth() + theme_bw() 
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
-
-**Chapter 6.3**
-
-```{r}
-## read gapminder csv. Note the readr:: prefix identifies which package it's in
-gapminder <- readr::read_csv('https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder.csv') 
-
-gapminder
-```
-
-```{r}
-head(gapminder)
-
-```
-
-```{r}
-tail(gapminder)
-
-```
-
-```{r}
-head(gapminder,10)
-
-```
-
-```{r}
-tail(gapminder,10)
-
-```
-
-```{r}
-str(gapminder)
-```
-
- 
-
-```{r}
-names(gapminder)
-```
-
-```{r}
-dim(gapminder)
-```
-
-```{r}
-ncol(gapminder)
-```
-
-```{r}
-nrow(gapminder)
-```
-
-```{r}
-summary(gapminder)
-```
-
-```{r}
-library(skimr)
-```
-
-```{r}
-skim(gapminder)
-```
-
-```{r}
-gapminder$lifeExp
-```
-
-```{r}
-head(gapminder$lifeExp)
-```
-
-```{r}
-str(gapminder$lifeExp)
-```
-
-```{r}
-summary(gapminder$lifeExp)
-```
-
-```{r}
-filter(gapminder)
-```
-
-```{r}
-#filter()pick observations by their values 
-
-#select() pick variables by their names 
-
-#mutate() create new variables with functions of existing variables 
-
-#summarise() collapse many values down to a single summary 
-
-#arrange(), reorder the rows 
-
-#group_by(), changes the scope of each function from operating on the entire dataset to operating on it by group-by-group
-
-#Together these properties make it easy to chain together multiple simple steps to achieve a complex result. 
-```
-
-```{r}
-library(tidyverse)
-
-filter(gapminder, lifeExp <29) 
-```
-
-```{r}
-filter(gapminder, country == "Mexico")
-```
-
-```{r}
-filter(gapminder,country %in% c("Mexico", "Peru"))
-```
-
-```{r}
-filter(gapminder,country =="Mexico", year ==2002)
-```
-
-```{r}
-x <- filter(gapminder, country=="Brazil", year >1986)
-mean(x$lifeExp)
-```
-
-```{r}
-select(gapminder, year, country, lifeExp)
-```
-
-```{r}
-select(gapminder, -continent, -lifeExp)
-```
-
-```{r}
-
-gap_cambodia <-filter(gapminder, country == "Cambodia")
-gap_cambodia <-select(gap_cambodia, -continent, lifeExp)
-```
-
-```{r}
-gapminder %>% head(3)
-```
-
-```{r}
-gap_cambodia <-gapminder %>%
-  filter(country == "Cambodia")%>%
-  select(-continent, -lifeExp)
-gapminder %>% 
-  filter(continent == "Asia", year == "2007") %>% 
-  mutate(pop_thousands = pop/1000) %>% 
-  select (country, year, pop_thousands) #this cleans up the dataframe but isn't necessary-look into taking this in or out and seeing what the difference is 
- 
-  
-
-```
-
-```{r}
-gapminder %>% 
-  filter(year == 2002) %>% 
-  group_by(continent) %>%
-  mutate(cont_pop=sum(pop))
-```
-
-```{r}
-gapminder %>% 
-  group_by(continent)%>% 
-  summarize(cont_pop =sum(pop)) %>% 
-  ungroup()
-```
-
-```{r}
-gapminder %>% 
-    group_by(continent, year) %>% 
-    summarize (cont_pop = sum(pop))
-```
-
-```{r}
-gapminder %>% 
-  group_by(continent, year) %>%
-  summarize(cont_pop = sum(pop)) %>% 
-  arrange(year)
-  
-```
-
-```{r}
-gapminder %>%
-  mutate(gdp = pop * gdpPercap) %>%
-  group_by(continent) %>%
-  mutate(max_gdp = max(gdp)) %>%
-  filter(gdp == max_gdp)
-```
-
-```{r}
-asia_life_exp <- gapminder %>% 
-  filter(continent == 'Asia') %>% 
-  group_by(country) %>% 
-  filter(lifeExp == max(lifeExp)) %>% 
-  arrange(year)
-
-```
-
-```{r}
-## wide format
-gap_wide <- readr::read_csv('https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder_wide.csv')
-
-## yesterday's format
-gapminder <- readr::read_csv('https://raw.githubusercontent.com/OHI-Science/data-science-training/master/data/gapminder.csv')
-```
-
-```{r}
-head(gap_wide) 
-str(gap_wide)
-
-```
