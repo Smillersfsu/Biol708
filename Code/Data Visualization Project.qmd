@@ -27,11 +27,37 @@ The `ec`
 
 ```{r}
 library(tidyverse)
+summary(df)
+librar
 ```
 
 ```{r}
-library(readxl)
-df <-read_excel(ELKVEG2016)
+library(ggplot2)
+df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv")
+
+```
+
+```{r}
+ggplot(data =df) +
+  geom_jitter(aes(x =Distance , y = Orthometric.Height, color=SiteID )) +
+    labs(x = "Distance",
+       y = "Othrometric Height",
+       title = "Variance of Orthometric Height With Distance Across Transects of Elkhorn Slough") + geom_smooth(aes(x= Distance, y= Orthometric.Height, color=SiteID)) +
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 7)) + 
+  theme(axis.text.y = element_text(angle = 90, hjust = 1, size = 7))
 ```
 
 `ho: false` option disables the printing of code (only output is displayed).
+
+```{r}
+
+ggplot(data =df) + 
+  geom_point(aes(x = Distance , y = Cover, color =SiteID)) +
+    labs(x = "Distance",
+       y = "Cover",
+       title = "Variance of Cover of Pickleweed Across Distance ") + geom_smooth(aes(x= Distance, y= Cover, color=SiteID )) +
+    theme_bw() +
+    theme(legend.title=element_blank()) + 
+    theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14))
+```
