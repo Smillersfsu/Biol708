@@ -28,7 +28,7 @@ The `ec`
 ```{r}
 library(tidyverse)
 summary(df)
-librar
+
 ```
 
 ```{r}
@@ -39,25 +39,70 @@ df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/
 
 ```{r}
 ggplot(data =df) +
-  geom_jitter(aes(x =Distance , y = Orthometric.Height, color=SiteID )) +
-    labs(x = "Distance",
-       y = "Othrometric Height",
-       title = "Variance of Orthometric Height With Distance Across Transects of Elkhorn Slough") + geom_smooth(aes(x= Distance, y= Orthometric.Height, color=SiteID)) +
-    theme_bw() +
+  geom_point(aes(x =SiteID , y = MLLW, color= Maximum.Canopy.Height)) +
+    labs(x = "Elkhorn Slough Transects",
+       y = "Mean Low Low Water (MLLW)",
+       title = "Variance of Maximum Canopy Height Across MLLW Across Transects of Elkhorn Slough") + 
+    theme_bw() + scale_color_gradient(low ="brown", high = "green") + 
     theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 7)) + 
   theme(axis.text.y = element_text(angle = 90, hjust = 1, size = 7))
 ```
 
 `ho: false` option disables the printing of code (only output is displayed).
 
-```{r}
+```{r, fig.width=10, fig.height=8}
 
 ggplot(data =df) + 
-  geom_point(aes(x = Distance , y = Cover, color =SiteID)) +
-    labs(x = "Distance",
-       y = "Cover",
-       title = "Variance of Cover of Pickleweed Across Distance ") + geom_smooth(aes(x= Distance, y= Cover, color=SiteID )) +
-    theme_bw() +
-    theme(legend.title=element_blank()) + 
-    theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14))
+  geom_point(aes(size= 6, x = SiteID, y = MLLW, color = Cover)) + 
+    labs(x = "Elkhorn Slough Transects",
+       y = "Mean Low Low Water (MLLW)",
+       title = "Differences in Cover of Pickleweed in relation to MLLW in Elkhorn Slough Transects") +
+    theme_bw() + scale_color_gradient(low ="brown", high = "green") +
+    theme(legend.title=element_text("% Cover")) + theme(axis.text.x = element_text(angle = 25, hjust = 1, size = 11)) +theme(plot.title = element_text(hjust = 0.5, size=18))+theme(axis.title.x.bottom=element_text(size = 14))+theme(axis.title.y.left = element_text(size = 14))
+```
+
+```{r}
+install.packages("ggridges", dependencies =TRUE)
+install.packages("tidyr", dependencies = TRUE)
+```
+
+```{r}
+library(ggridges)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+```
+
+```{library(ggplot)}
+
+df<-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv", header =TRUE, sep = ",")
+
+data <- data %>% 
+  gather(key="text", value="value") %>%
+  mutate(text = gsub("\\.", " ", text)) %>% 
+  filter(text %in% c("SiteID"))
+
+data %>% 
+  mutate(text = fct_reorder(text, value)) %>% 
+  ggplot( aes(y= text, x= value, fill= text)) + 
+  geom_denisty_ridges(alpha=0.6, stat="binline", bins=20) + 
+  theme_ridges() + 
+  theme(legend.position = "none", panel.spacing = unit(0.1, "lines"), strip.text.x=element_text(size =8)) +
+  xlab("Distance") + ylab("Othrometric.Height")
+
+```
+
+```{r}
+df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv") 
+
+hist(df$Cover, main ="Histogram of % Cover over Elkhorn Slough Data", xlab = "% Cover Over a Quadrat", col = "green", xlim=c(0,100), ylim=c(0,60))
+```
+
+```{r}
+my_colours <- c("#f2edee","#8a79f4","#f0d359","#ff70c3","#53ecc0",
+                "#af0043","#bae179","#ec5646","#4f9059","#af3c00")
+gradient_base <- my_colours[1] 
+my_gradients <- Map(my_colours
+                    function(x) colorRampPalette(c(gradient_base,x))(5))
 ```
