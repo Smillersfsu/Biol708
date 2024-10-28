@@ -1,0 +1,65 @@
+---
+title: "Understanding Growth Patterns of Pickleweed (*Salicornia pacifica*) Across Elkhorn Slough NERR Reserve "
+author: "Savannah K. Miller"
+date: "October 27, 2024"
+editor: visual
+format: docx
+subtitle: "Github repository hyperlink-https://github.com/Smillersfsu/Biol708/tree/main/Code (check Code folder for Data Visualization Project)"
+---
+
+```{r,  echo=FALSE}
+
+```
+
+```{r,echo=FALSE}
+#| echo: false
+
+```
+
+```{r, echo=FALSE}
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv")
+str(df)
+
+
+```
+
+```{r, Figure 1, fig.width=14, fig.height=12, echo=FALSE, fig.cap="Figure 1. Cover of Pickleweed across Quadrat Measurements throughout transects of Elkhorn Slough, in relation to MLLW of each measurement. Data indicates that the highest rates of cover near 100% have a cut-off at position of 1.8 around MLLW"}
+
+
+ggplot(data =df) + 
+geom_point(aes(x= SiteID, y = MLLW, color = Cover), size =6) + 
+    labs(x = "Elkhorn Slough Transects",
+       y = "Mean Low Low Water (MLLW)",
+       title = "Variance of Maximum Canopy Height Across MLLW In Elkhorn Slough, CA", color= "% Cover") +
+    theme_bw() + scale_color_gradient(low ="brown", high = "green") + 
+  theme(
+  axis.text.x = element_text(angle = 25, hjust = 1, size = 12), 
+  plot.title = element_text(hjust = 0.5, size=18), 
+  axis.title.x.bottom=element_text(size = 16),
+  axis.text.y = element_text(size = 12, color= "blue"), 
+  axis.title.y.left = element_text(size = 16, color = "blue"), 
+  legend.title = element_text(hjust = 1, size = 14), 
+  legend.text = element_text(size=11)) 
+```
+
+```{r Figure 2, fig.width=14, fig.height=12, fig.cap= "Figure 2. Maximum Canopy Height of Pickleweed across Quadrat Measurements throughout transects of Elkhorn Slough, in relation to MLLW of each measurement. Data mirrors the % Cover data, with the highest canopies existing at 1.8 or below MLLW"}
+ 
+ggplot(data =df) +
+  geom_point(aes(x =SiteID , y = MLLW , color= Maximum.Canopy.Height), size= 6) +
+    labs(x = "Elkhorn Slough Transects",
+       y = "Mean Low Low Water (MLLW)", color="Maximum Canopy Height (meters)", 
+       title = "Variance of Maximum Canopy Height Across MLLW In Elkhorn Slough, CA") + 
+    theme_bw() + scale_color_gradient(low ="brown", high = "green") + 
+    theme(
+      axis.text.x = element_text(angle = 25, hjust = 1, size = 12), 
+  plot.title = element_text(hjust = 0.25, size=18), 
+  axis.title.x.bottom=element_text(size = 16),
+  axis.text.y = element_text(size = 12, color= "blue"), 
+  axis.title.y.left = element_text(size = 16, color = "blue"), 
+  legend.title = element_text(hjust = 1, size = 14), 
+  legend.text = element_text(size=11)) 
+
+```

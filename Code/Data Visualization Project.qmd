@@ -1,7 +1,7 @@
 ---
-title: "Data Visualization Activity"
+title: "Understanding Growth Patterns of Pickleweed (Salicornia pacifica) Across Elkhorn Slough NERR Reserve "
 format: html
-editor: visual
+editor: Savannah K. Miller 
 ---
 
 ## Quarto
@@ -27,7 +27,7 @@ The `ec`
 
 ```{r}
 library(tidyverse)
-summary(df)
+
 
 ```
 
@@ -37,15 +37,16 @@ df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/
 
 ```
 
-```{r}
-ggplot(data =df) +
-  geom_point(aes(x =SiteID , y = MLLW, color= Maximum.Canopy.Height)) +
+``` {#{r}
+#ggplot(data =df) +
+  geom_point(aes(x =SiteID , y = MLLW , color= Maximum.Canopy.Height), size= 6) +
     labs(x = "Elkhorn Slough Transects",
        y = "Mean Low Low Water (MLLW)",
-       title = "Variance of Maximum Canopy Height Across MLLW Across Transects of Elkhorn Slough") + 
+       title = "Variance of Maximum Canopy Height Across MLLW Across Elkhorn #Slough") + 
     theme_bw() + scale_color_gradient(low ="brown", high = "green") + 
-    theme(axis.text.x = element_text(angle = 90, hjust = 1, size = 7)) + 
-  theme(axis.text.y = element_text(angle = 90, hjust = 1, size = 7))
+    theme(axis.text.x = element_text(angle = 25, hjust = 1, size = 7)) + 
+  theme(axis.text.y = element_text(hjust = 1, size = 7))
+ 
 ```
 
 `ho: false` option disables the printing of code (only output is displayed).
@@ -53,12 +54,19 @@ ggplot(data =df) +
 ```{r, fig.width=10, fig.height=8}
 
 ggplot(data =df) + 
-  geom_point(aes(size= 6, x = SiteID, y = MLLW, color = Cover)) + 
-    labs(x = "Elkhorn Slough Transects",
+geom_point(aes(x= SiteID, y = MLLW, color = Cover), size =6) + 
+    labs(x = "Elkhorn Slough Transect Sites",
        y = "Mean Low Low Water (MLLW)",
-       title = "Differences in Cover of Pickleweed in relation to MLLW in Elkhorn Slough Transects") +
-    theme_bw() + scale_color_gradient(low ="brown", high = "green") +
-    theme(legend.title=element_text("% Cover")) + theme(axis.text.x = element_text(angle = 25, hjust = 1, size = 11)) +theme(plot.title = element_text(hjust = 0.5, size=18))+theme(axis.title.x.bottom=element_text(size = 14))+theme(axis.title.y.left = element_text(size = 14))
+       title = "Differences in Cover of Pickleweed in relation to MLLW in Elkhorn Slough Transects", color= "% Cover") +
+    theme_bw() + scale_color_gradient(low ="brown", high = "green") + 
+  theme(axis.text.x = element_text(angle = 25, hjust = 1, size = 12)) + 
+  theme(plot.title = element_text(hjust = 0.5, size=18))+
+  theme(axis.title.x.bottom=element_text(size = 16))+
+  theme(axis.text.y = element_text(size = 12, color= "blue")) +
+  theme(axis.title.y.left = element_text(size = 16, color = "blue")) +
+  theme(legend.title = element_text(hjust = 1, size = 14)) +
+  theme(legend.text = element_text(size=11)) +  knitr::kable(top_gap, 
+               caption = "Regression analysis of percentage cover of Pickleweed (*Salicornia pacifica*) compared to the MLLW measured at the site, demonstrating a potential cut off in recruitment at MLLW.")
 ```
 
 ```{r}
@@ -74,8 +82,7 @@ library(tidyr)
 library(forcats)
 ```
 
-```{library(ggplot)}
-
+``` {library(ggplot)}
 df<-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv", header =TRUE, sep = ",")
 
 data <- data %>% 
@@ -90,13 +97,39 @@ data %>%
   theme_ridges() + 
   theme(legend.position = "none", panel.spacing = unit(0.1, "lines"), strip.text.x=element_text(size =8)) +
   xlab("Distance") + ylab("Othrometric.Height")
-
 ```
 
 ```{r}
 df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv") 
 
-hist(df$Cover, main ="Histogram of % Cover over Elkhorn Slough Data", xlab = "% Cover Over a Quadrat", col = "green", xlim=c(0,100), ylim=c(0,60))
+ggplot::df,aes(x=Cover)) + 
+  geom_histogram(binwidth = 1, fill="green", color = "black") + labs(title = "Frequency of Patches of Pickleweed in Elkhorn Slough Reserve", 
+  x="% Cover over a Quadrat", 
+  y= "Frequency of Patches in Elkhorn Slough") +
+  theme(axis.text.x = element_text(size = 12)) + 
+  theme(plot.title = element_text(hjust = 0.5, size=18))+
+  theme(axis.title.x.bottom=element_text(size = 16))+
+  theme(axis.text.y = element_text(size = 12)) +
+  theme(axis.title.y.left = element_text(size = 16)) +
+  theme(legend.title = element_text(size = 14)) +
+  theme(legend.text = element_text(size=11)) + knitr::kable(top_gap,caption = "Histogram analysis demonstrating that there is a high frequency of one cover size amongst quadrats measured within Elkhorn Slough.")
+```
+
+```{r}
+df <-read.csv("https://raw.githubusercontent.com/Smillersfsu/Biol708/refs/heads/main/Code/ELKVEG2016.csv") 
+
+ggplot::df,aes(x=Cover)) + 
+  geom_histogram(binwidth = 1, fill="green", color = "black") + labs(title = "Frequency of Patches of Pickleweed in Elkhorn Slough Reserve", 
+  x="% Cover over a Quadrat", 
+  y= "Frequency of Patches in Elkhorn Slough") +
+  theme(axis.text.x = element_text(size = 12)) + 
+  theme(plot.title = element_text(hjust = 0.5, size=18))+
+  theme(axis.title.x.bottom=element_text(size = 16))+
+  theme(axis.text.y = element_text(size = 12)) +
+  theme(axis.title.y.left = element_text(size = 16)) +
+  theme(legend.title = element_text(size = 14)) +
+  theme(legend.text = element_text(size=11)) + knitr::kable(top_gap,caption = "Histogram analysis demonstrating that there is a high frequency of one cover size amongst quadrats measured within Elkhorn Slough.")
+
 ```
 
 ```{r}
