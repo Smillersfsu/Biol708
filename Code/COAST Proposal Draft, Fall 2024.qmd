@@ -3,47 +3,164 @@ title: "COAST Proposal Draft, Fall 2024"
 author: "Savannah K. Miller"
 format: docx
 editor: visual
+bibliography: references.bib
 ---
 
 # COAST Draft Proposal, Fall 2024 
 
-## Background
+## Project Description 
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+### Background
 
-## Research Objectives 
+Current research shows that there is a complexity of potential futures for marsh ecosystems, in light of expected worldwide sea level rise (Kirwan et al 2016). Marsh lands are home to a specific set of species, which are carefully adapted to the unique saline and freshwater influences that characterize a marshland (CITE) . In addition to that, there have been increased discoveries on marsh lands roles in dampening the impacts of atmospheric rivers and extreme weather events, offering a potential benefit to humankind to protect coastal cities and urban areas. The potentiality of this future is daunting on a worldwide scale, but the individual complexity of the tidal, geomorphic, and vegetative makeup of each estuary underline the importance on detailed in-field confirmation of the existing abiotic processes that our healthiest remaining marshes go through.
 
-## Hypotheses 
+Sediment is the major component in a marsh, transported through waves and tidal action suspended in
+the water (suspended sediment), and later contributing to surface area and composition of the marsh through disposition, and then accretion with multiple layers of sediment layering across the marsh platform. To improve marsh ecosystems, understanding the paths that sediment takes to get to the marsh are pertinent to building and retaining more successful marsh restoration projects.
 
-## Methods 
+Vegetation also plays an important role along the marsh platform in terms of attenuating sediment to the surface, allowing for it to accrete over time. Evidence comes from multiple models and in-field studies
+that have determined that vegetation is a key factor to control flow and sedimentation patterns in the marsh platform, and even assist in differences in levels of disposition on the marsh platform (Temmerman 2005). Specifically in the San Francisco Estuary, It has been observed that two vegetative species work together in tandem for both accretion and disposition of sediment, respectively (Lacy 2019). Cordgrass has been observed to provide hydraulic erosional elements to incoming waves, which creates more friction for suspended sediment to more evenly spread across the marsh platform. Then, once the suspended sediment has reached above the marsh platform, it has also been linked to increased rates of accretion onto the marsh platform with a vegetated marsh edge, with pickleweed specifically noted as having a vital role in that process.
 
-### *Experimental Design and Procedure* 
+Therefore, it is crucial for vegetation growth and structure to be monitored in tandem with understanding differences in suspended sediment behavior across different marsh edge types. They are interlinked variables that determine the success of a marsh edge at the forefront of terrestrial and bayfront action.
+
+Therefore, it is crucial for vegetation growth and structure to be monitored in tandem with understanding differences in suspended sediment behavior across different marsh edge types. They are interlinked variables that determine the success of a marsh edge at the forefront of terrestrial and bayfront action. 
+
+At the forefront of the issues of sea level rise is the marsh edge, where the start of this terrestrial ecosystem bares the brunt of tidal cycles, storm influences, and erosional effects to the sediment. The
+marsh edge is a dynamic area of the marsh that is thought to evolve through different types throughout the lifecycle of the marsh. However, more information is needed to understand the dynamics of the marsh edge type in order to classify the marsh edges, and therefore make management decisions for
+the marsh as a whole in response to critical issues like sea level rise. Therefore, our study will focus on how suspended sediment transport paths differ along different marsh edge types, while characterizing the vegetation across these edges in regards to their structure to retain those sediments
+(make this in to two sentences).
+
+### Research Objectives 
+
+Based on previous literature (Shifting Shorelines Beagle et al 2015), there are thought to be five marsh edge types, which are based on the geomorphological differences: scarp with bayward vegetation (SV), scarp without bayward vegetation (SN), ramp without inflection point (RNI), ramp with inflection point (RI), and beaches or rocky shoreline (B). Within the report, the "scarp without bayward vegetation" had the highest rates of retreating at the time of the report. The location of these marsh edge types can be linked to the riverine-estuary connection of the Gallinas Creek, Sonoma Creek, Petaluma River,
+and Napa River. These correlations in observations provide a great opportunity to confirm conditions of the adjacent marshlands to understand the variables at play within the action. Considering the key role of vegetation within this finding and past research, we have the following research objectives:
+
+-   To better understand the sediment transport pathways along the scarp without bayward vegetation marsh edge type, through measurement of suspended sediment in the water column and accreted over the marsh over time.
+
+-   To understand the role and differences in bayward vegetation across a marsh edge (cordgrass) and within the marsh (pickleweed) in rates of sediment accretion on a marsh land platform
+
+-   To compare the validity and level of detail of in-field measurements against annual sensors for suspended sediment
+
+-   To better understand the role of the San Pablo Gyre and the angle within the San Pablo Bay's affect on sediment accretion
+
+### Hypotheses 
+
+Sites further eastward of the San Pablo Gyre with higher densities and canopies of pickleweed alongmarsh edge will accrete at higher rates than those edges further west with increased tidal action, and no bayward vegetation
+
+### Methods 
+
+All measurements will be collected over 2 summer seasons, and 2 winter storm seasons will help measure the changes and patterns of this marsh over a shorter time scale with repeated, detail intensive methods at each site for a more complete picture to accompany the broad landscape level models existing for land managers of today.
+
+Summer season measurements will be completed at Mean high high water of field collection, and mean low low water of the proceeding day, as those time periods appear to have the most potential for sediment transport. Winter season measurements will be completed following the summer season protocol, unless there is a storm event predicted that can be planned for data collection, which is another event of great potential for sediment transport (Thorne 2022).
+
+Measurements of short term accretion mats, sipper bottles at the average mean high low tide marking, and feldspar, in transects across the following three edges of the marsh edge, as outlined by Lacy 2019.
+
+In addition to measuring the behavior of the sediment, it has been demonstrated that the vegetation of the marsh plays a strong role in the retention of sediment through the structural complexity of the branching pattern and density of the canopy. Little work has been done on the role of annual pickleweed versus perrenial pickleweed across a marsh land, neither has the structural complexity of the vegetation been compared across marsh edge scales to the patterns of sediment transport and accretion on in an infield scale.
+
+Methodology (refer to Thorne 2022, and insert this photo
+
+In alignment with the research, we have picked 5 sites within the San Pablo Bay Gyre, which is an important entry point of both free water from the Sacramento Delta system, and salt water from the entrance of the San Francisco Bay through the Golden Gate. It is also of particular focus as an
+area undergoing increased rates of erosion comparably to other parts of the San Francisco Bay, and is of large environmental and economic importance to the wildlife and human communities that occupy it.
+
+Surface Elevation Tables (SETs)
+
+Feldspar marker horizons (MH)
+
+The first region (closest to the mudflats) is characterized
+by wave-driven resuspension, a landward increase in bed shear stress and SSC,
+and net erosion. The most accretion occurred in the second region, where
+vegetation strongly attenuates waves, and bed shear stress and SSC decrease in
+the landward direction. The third zone (within the pickleweed) is also
+depositional. Bed shear stress is spatially uniform and particle settling is
+the dominant process. The boundaries between these regions move landward with
+increasing wave energy. The conceptual model applies broadly to wave-exposed
+marsh edges. New observations documenting how the spatial scales of the regions
+vary with local conditions can further inform understanding of marsh edge
+processes.
+
+Lacy 2019 demonstrated there are actually higher accretion
+rates observed in the summer due to the presence of cordgrass in the lower
+marsh edge that creates more erosional shear stress for sediment, making it
+more likely for sediment to accrete.
+
+Lacy 2019-calm conditions in summer had more deposition of
+sediments due to the cordgrass zone and in the pickleweed zone
+
+#### *Experimental Design and Procedure* 
 
 #### Suspended Sediment Measurements 
 
+The following suspended sediment variables will be focused within the five field sites:
+
+-   Short term suspended sediment concentrations using sipper bottles to capture a 24 hour time stamp at mean high high water (MHHW) tide mark, when it is known that most of the sediment that later accretes in the upper reaches of the marsh are transported
+
+-   Long term accretion using feldspar mats at different distances from the edge of the marsh
+
+-   Long term elevation changes over time at the marsh edge, to see near term accretion rates at the edge of the marsh
+
 #### Vegetation Measurements 
 
-## Data Acquisition and Analysis 
+Within the five field sites, pickleweed will be mapped 30-50 meter between the pickleweed zone and the cordgrass zone (Lacy 2019) beyond the point of growth from the marsh edge, with the following measurements collected across 5 transects from each marsh edge site:
 
-### *Suspended Sediment Measurements* 
+-   Canopy density using imageJ to map out the amount of the picture is taken up
 
-### *Long and Short Term Accretion Measurements* 
+-   Presence of annual vs perrenial pickleweed within the plot in each transect
 
-### *Vegetation Monitoring Measurements* 
+-   Canopy height (in field measurement)
 
-## Potential Management Impact/Insights 
+-   Branching pattern complexity (random sample from plot of 5-10 plants)
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+### Data Acquisition and Analysis
 
-```{r}
-1 + 1
-```
+The following data points will be plotted across linear regression curves to understand the relationship between variables:
 
-You can add options to executable code like this
+-   Short Term Accretion Collection (Weight measurement-grams)
 
-```{r}
-#| echo: false
-2 * 2
-```
+-   Suspended Sediment Collection (Weight measurement-grams)
 
-The `echo: false` option disables the printing of code (only output is displayed).
+-   Long Term Accretion Collection (Change in length/height-centimeters)
+
+-   Vegetation Structure (% Density of the image, Highest Canopy height-cm, \# of Branches of average plant)
+
+## Need for Research 
+
+Understanding and comparing the way the sediment moves across the marsh edge, as well as the role of the vegetation in the accretion of sediment in marsh are interlinked knowledge points to understand the
+complexity of marsh function, and measure over time for marsh function and health. The work completed here could add new layers to understanding the complexity of the marsh, and compared to other measurements of the marsh that are commonly used to measure "health", for example in annual shorebird counts and mammal monitoring. This work could also offer a new perspective on environmental monitoring of common living and nonliving parameters, such as tidal inundation as a mechanism for sediment transport, and vegetation surveys as a way to measure the functional physical components of an evolving marsh.
+
+## Relevance to State of California 
+
+As it stands, marsh ecosystems are already in a vulnerable position, with more than 90% of California wetlands drained, largely for human resource use (California Natural Resources Agency 2010). The potential damage to this limited resource of a marsh ecosystem cannot be overstated if local land managers cannot accurately anticipate and understand how to adapt their marshes overtime.
+
+We have already seen the anthropogenic impacts on our sediment bank within the San Francisco Bay marshlands through the development of the "centennial marshland", a subsection of the marsh built up entirely of the sediment eroded from the goldrush era's numerous dynamite actions across the Sierra Nevada. These events show the impact of both small and cumulative actions across a landscape to change local habitats. Once we better understand the typical abiotic processes across the bayward side of the marshlands in terms of sediment transport, it will inform future decisions on managing unprecedented weather events.
+
+## Budget and Justification 
+
+This field-heavy data collection requires extensive driving and bridge tolls.
+
+In addition, conference attendance to share and compare findings is very pertitnent considering how location specific these findings are
+
+| Item/Description            | Unit Price     | Quantity | Amount to Awardee (via Financial Aid) | Amount to Department |
+|---------------|---------------|---------------|---------------|---------------|
+| Bridge toll(s)              | 1 toll per day |          |                                       | N/A                  |
+| Gas, 2 full tanks per month |                |          |                                       | N/A                  |
+| Conference Attendance       |                |          |                                       |                      |
+| Conference                  |                |          |                                       |                      |
+
+## Timeline 
+
+*December 2024-February 2025:* Collect preliminary data at and around the five study sites of interest, placing the short and long term accretion field methods out on the site and collecting within appropriate time limits.
+
+*March-May 2025:* Analysis of winter results, planning for summer deployment of field instruments, and plan out tidal cycle timing for field collections
+
+*June-August 2025:* Collect data at five study sites of interest including short and long term accretion field methods, suspended sediment monitoring, and canopy and density measurements of pickleweed on marsh platform.
+
+*September 2025-November 2025:* Analysis of summer results, planning for winter deployment of field instruments, and plan out tidal cycle timing for field collections
+
+*December 2025-February 2026:* Collect data at five study sites of interest including short and long term accretion field methods, suspended sediment monitoring, and canopy and density measurements of pickleweed on marsh platform.
+
+*March-May 2025:* Analysis of winter results, planning for summer deployment of field instruments, and plan out tidal cycle timing for field collections. Begin to write up winter results and finalize.
+
+*June-August 2025:* Collect data at five study sites of interest including short and long term accretion field methods, suspended sediment monitoring, and canopy and density measurements of pickleweed on marsh platform.
+
+*September 2025-November 2025:* Analysis of summer results, begin write-up of final results.
+
+*November 2025-February 2025:* Thesis write-up, prepare for defense
